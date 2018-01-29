@@ -1,0 +1,112 @@
+/* _____ Basic elements _____ */
+
+::-webkit-input-placeholder {color: rgba(#1a1a1a, .5);font-size: 18px;}
+::-moz-placeholder {color: rgba(#1a1a1a, .5);font-size: 18px;}
+:-moz-placeholder {color: rgba(#1a1a1a, .5);font-size: 18px;}
+:-ms-input-placeholder {color: rgba(#1a1a1a, .5);font-size: 18px;}
+
+@include breakpoint("phablet") {
+	::-webkit-input-placeholder {font-size: 20px;}
+	::-moz-placeholder {font-size: 20px;}
+	:-moz-placeholder {font-size: 20px;}
+	:-ms-input-placeholder {font-size: 20px;}
+}
+@include breakpoint("small") {
+	::-webkit-input-placeholder {font-size: 20px;}
+	::-moz-placeholder {font-size: 20px;}
+	:-moz-placeholder {font-size: 20px;}
+	:-ms-input-placeholder {font-size: 20px;}
+}
+
+
+
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.center{text-align: center !important;}
+.text-l{text-align: left !important;}
+.text-r{text-align: right !important;}
+.clearfix:before, .clearfix:after {content: "";display: table;}
+.clearfix:after {clear: both;}
+.flow-hidden {overflow: hidden}
+.none {
+	display: none;
+}
+
+/* base */
+
+
+html {
+	height: 100%;
+}
+body {
+
+	height: 100%;
+	background-color: #fff;
+	position: relative; 
+	color: #000;
+	font-family: $font1;
+	font-weight: 400;
+	text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+	line-height: 1.2;
+
+	min-width: $lg-bp;
+	
+}
+.main-wrapper {
+	height: 100%;
+	max-width: 1920px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* layout */
+
+
+
+
+ul {
+	margin: 0;
+	padding: 0;
+	li {
+		list-style-type: none;
+	}
+}
+
+h1,h2,h3,h4,h5,h6 {
+	line-height: 1,2;
+	font-weight: normal;
+	padding: 0;
+	margin: 0;
+}
+
+
+
+

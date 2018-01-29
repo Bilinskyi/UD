@@ -1,0 +1,199 @@
+@mixin borderhover($w, $h) {
+	
+	.tl:after {
+		width: $w !important;
+		height: $h !important;
+	}
+	.tr:before {
+		width: $h !important;
+		height: $w !important;
+	}
+	.tr:after {
+		width: $w !important;
+		height: $h !important;
+	}
+	.br:after {
+		width: $w;
+		height: $h !important;
+	}
+	.bl:before {
+		width: $h;
+		height: $w !important;
+	}
+}
+
+@mixin corn($pos, $bg, $w1, $h1, $w2, $h2) {
+	position: absolute;
+	@if $pos == 'tl' {
+		top: 0;
+		left: 0;
+
+
+		&:before {
+			width: $w1;
+			height: $h1;
+			top: 0;
+			left: 0;
+			transition: all .3s ease;
+		}
+		&:after {
+			width: $w2;
+			height: $h2;
+			top: 0;
+			left: 0;
+			transition: all .3s ease;
+		}
+
+	} @else if $pos == 'tr' {
+		top: 0;
+		right: 0;
+
+		&:before {
+			width: $w1;
+			height: $h1;
+			top: 0;
+			right: 0;
+			transition: all .3s ease;
+		}
+		&:after {
+			width: $w2;
+			height: $h2;
+			top: 0;
+			right: 0;
+			transition: all .3s ease;
+		}
+
+	} @else if $pos == 'br' {
+		bottom: 0;
+		right: 0;
+
+		&:before {
+			width: $w1;
+			height: $h1;
+			bottom: 0;
+			right: 0;
+			transition: all .3s ease;
+		}
+		&:after {
+			width: $w2;
+			height: $h2;
+			bottom: 0;
+			right: 0;
+			transition: all .3s ease;
+		}
+
+	} @else if $pos == 'bl' {
+		bottom: 0;
+		left: 0;
+
+		&:before {
+			width: $w1;
+			height: $h1;
+			bottom: 0;
+			left: 0;
+			transition: all .3s ease;
+		}
+		&:after {
+			width: $w2;
+			height: $h2;
+			bottom: 0;
+			left: 0;
+			transition: all .3s ease;
+		}
+
+	}
+	&:after,
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		background-color: $bg;
+	}
+}
+
+@mixin breakpoint($point) {
+	@if $point == minlarge {
+		@media (min-width: 1700px) { @content ; }
+	}
+	@else if $point == large {
+		@media (min-width: $lg-bp) { @content ; }
+	}
+	@else if $point == medium {
+		@media (min-width: $md-bp) { @content ; }
+	}
+	@else if $point == small {
+		@media (min-width: $sm-bp) { @content ; }
+	}
+	@else if $point == phablet {
+		@media (min-width: $bp-xsmall)  { @content ; }
+	}
+	@else if $point == bp1 {
+		@media (max-width: 1599px) { @content ; }
+	}
+
+	@else if $point == maxlarge {
+		@media (max-width: $lg-bp - 1) { @content ; }
+	}
+	@else if $point == maxmedium {
+		@media (max-width: $md-bp - 1) { @content ; }
+	}
+	@else if $point == maxsmall {
+		@media (max-width: $sm-bp - 1) { @content ; }
+	}
+	@else if $point == mobileonly {
+		@media (max-width: $bp-xsmall - 1)  { @content ; }
+	}
+}
+
+%justify-c {
+	font-size: 1px;
+	text-align: justify;
+	&:after {
+		content: '';
+		display: inline-block;
+		width: 100%;
+		height: 0;
+		overflow: hidden;
+	}
+	&>* {
+		display: inline-block;
+	}
+}
+
+
+%clearfix {
+	*zoom: 1;
+	&:before, &:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+%circle {
+	border-radius: 50%;
+}
+
+%input {
+	display: inline-block;
+	width: 100%;
+	height: 30px;
+	border: none; 
+	outline: none;
+	text-align: center;
+	color: #000;
+	font-size: 14px;
+}
+
+%submit {
+	display: inline-block;
+	border: none;
+	outline: none;
+	width: 100%;
+	height: 35px;
+	text-align: center;
+	font-size: 14px;
+	color: #000;
+}

@@ -1,0 +1,14 @@
+block config
+	- var pageTitle = '111'
+doctype html
+include ../bemto-master/bemto.pug
+include ../includes/mixins.pug
+html(lang="ru")
+	head
+		include ../includes/head.pug
+	body
+		.main-wrapper
+			block content
+		.up-button
+			i.icon-arrow
+		include ../includes/scripts.pug

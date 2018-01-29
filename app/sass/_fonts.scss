@@ -1,0 +1,196 @@
+@font-face {
+  font-family: "DinPro";
+  src: url("../fonts/DinPro-Bold/dinpro-bold.eot");
+  src: url("../fonts/DinPro-Bold/dinpro-bold.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/DinPro-Bold/dinpro-bold.woff") format("woff"),
+  url("../fonts/DinPro-Bold/dinpro-bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+
+@font-face {
+	font-family: "GothamPro";
+	src: url("../fonts/GothamPro/GothamProLight/GothamProLight.eot");
+	src: url("../fonts/GothamPro/GothamProLight/GothamProLight.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/GothamPro/GothamProLight/GothamProLight.woff") format("woff"),
+	url("../fonts/GothamPro/GothamProLight/GothamProLight.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: "GothamPro";
+	src: url("../fonts/GothamPro/GothamProRegular/GothamProRegular.eot");
+	src: url("../fonts/GothamPro/GothamProRegular/GothamProRegular.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/GothamPro/GothamProRegular/GothamProRegular.woff") format("woff"),
+	url("../fonts/GothamPro/GothamProRegular/GothamProRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "GothamPro";
+	src: url("../fonts/GothamPro/GothamProMedium/GothamProMedium.eot");
+	src: url("../fonts/GothamPro/GothamProMedium/GothamProMedium.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/GothamPro/GothamProMedium/GothamProMedium.woff") format("woff"),
+	url("../fonts/GothamPro/GothamProMedium/GothamProMedium.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 500;
+}
+
+
+@font-face {
+	font-family: "GothamPro";
+	src: url("../fonts/GothamPro/GothamProBold/GothamProBold.eot");
+	src: url("../fonts/GothamPro/GothamProBold/GothamProBold.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/GothamPro/GothamProBold/GothamProBold.woff") format("woff"),
+	url("../fonts/GothamPro/GothamProBold/GothamProBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: "GothamPro";
+	src: url("../fonts/GothamPro/GothamProBlack/GothamProBlack.eot");
+	src: url("../fonts/GothamPro/GothamProBlack/GothamProBlack.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/GothamPro/GothamProBlack/GothamProBlack.woff") format("woff"),
+	url("../fonts/GothamPro/GothamProBlack/GothamProBlack.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 900;
+}
+
+
+
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?qt6u49');
+  src:  url('../fonts/icomoon.eot?qt6u49#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?qt6u49') format('truetype'),
+    url('../fonts/icomoon.woff?qt6u49') format('woff'),
+    url('../fonts/icomoon.svg?qt6u49#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-logo:before {
+  content: "\e915";
+  color: #fff;
+}
+.icon-arrow-lg:before {
+  content: "\e902";
+  color: #fff;
+}
+.icon-arrow:before {
+  content: "\e901";
+  color: #fff;
+}
+.icon-behance:before {
+  content: "\e903";
+  color: #b1b7cf;
+}
+.icon-close:before {
+  content: "\e905";
+  color: #fff;
+}
+.icon-copyrigter:before {
+  content: "\e906";
+  color: #1b6fec;
+}
+.icon-designer:before {
+  content: "\e907";
+  color: #1b6fec;
+}
+.icon-dribbble:before {
+  content: "\e909";
+  color: #b1b7cf;
+}
+.icon-fb-hover:before {
+  content: "\e90a";
+  color: #4267b2;
+}
+.icon-front-end:before {
+  content: "\e90e";
+  color: #1b6fec;
+}
+.icon-info1:before {
+  content: "\e90f";
+  color: #fff;
+}
+.icon-info2:before {
+  content: "\e910";
+  color: #fff;
+}
+.icon-info3:before {
+  content: "\e911";
+  color: #fff;
+}
+.icon-info4:before {
+  content: "\e912";
+  color: #fff;
+}
+.icon-info5:before {
+  content: "\e913";
+  color: #fff;
+}
+.icon-info6:before {
+  content: "\e914";
+  color: #fff;
+}
+.icon-mail-icon:before {
+  content: "\e917";
+  color: #4c5672;
+}
+.icon-manager:before {
+  content: "\e918";
+  color: #1b6fec;
+}
+.icon-marketing:before {
+  content: "\e919";
+  color: #1b6fec;
+}
+.icon-play:before {
+  content: "\e91b";
+  color: #fbfbfb;
+}
+.icon-quotes-lg:before {
+  content: "\e91e";
+  color: #fafcff;
+}
+.icon-sem:before {
+  content: "\e91f";
+  color: #1b6fec;
+}
+.icon-skype-icon:before {
+  content: "\e921";
+  color: #4c5672;
+}
+.icon-telegram-icon:before {
+  content: "\e923";
+  color: #4c5672;
+}
+.icon-viber-icon:before {
+  content: "\e925";
+  color: #4c5672;
+}
+.icon-vk-icon:before {
+  content: "\e928";
+  color: #4c5672;
+}
+
