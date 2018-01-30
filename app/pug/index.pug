@@ -4,6 +4,7 @@ block config
 
 block content
 	include includes/header.pug
+	include includes/form-fixed
 	include includes/section-1
 	include includes/section-2
 	include includes/section-3
@@ -14,7 +15,25 @@ block content
 	include includes/footer.pug
 
 	
-	
+	+price('price-1', 'MINIMAL', 'MINIMAL')
+	+price('price-2', 'NORMAL', 'NORMAL')
+	+price('price-3', 'MAXIMUM', 'MAXIMUM')
+
+
+
+	+b.forms_2#f
+		.btn-close.js-close-fancybox Закрыть
+			i.icon-close
+		+e.title Получите коммерческое предложение
+		.wrapp
+			.side
+				img(src="../img/magazine2.png", alt="")
+			.side.side_form
+				+b.form
+					+e.title-sm Оставьте заявку
+					+e.subtitle Специалист компании UDiamond свяжется<br>с Вами в течение рабочего дня.
+					+getProp('Получить предложение')
+
 
 
 

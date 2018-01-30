@@ -24,7 +24,7 @@
                 <div class="main-title"><span class="highlight main-title__highlight">Web</span><strong class="glitch glitch_1" data-txt="site">site</strong></div><br>
                 <div class="main-title"><strong class="glitch glitch_2" data-txt="development">development</strong> <small>creative agency</small></div>
                 <div class="main-subtitle">Помогаем опередить Ваших конкурентов <span>on-line</span></div>
-                <div class="btn-wrapp"><a class="button js-show-modal" href="#"><span>Обсудить проект</span></a><a class="button button_trn scr" href="#section-2"><span>Смотреть портфолио</span></a></div>
+                <div class="btn-wrapp"><a class="button js-show-modal js-val" data-form="Обсудить проект" href="#"><span>Обсудить проект</span></a><a class="button button_trn scr" href="#section-2"><span>Смотреть портфолио</span></a></div>
                 <div class="button-play">
                   <div class="button-play__link-wrapp"><a class="button-play__link" href="#"><i class="icon-play"></i></a>
                   </div>
@@ -48,7 +48,7 @@
       </header>
       <!-- end header-->
       <div class="form-fixed">
-        <div class="js-close">Закрыть<i class="icon-close"></i></div>
+        <div class="btn-close js-close">Закрыть<i class="icon-close"></i></div>
         <div class="form">
           <div class="form__title">Получите<br>бесплатную<br>консультацию
           </div>
@@ -78,20 +78,21 @@
                   </label>
                 </div>
                 <div class="tab-form__content">
-                  <label>Введите Ваш E-mail
-                    <input type="email" placeholder="Ваш E-mail" name="email" data-req="1">
+                  <label>Введите Ваш логин телеграм
+                    <input type="text" placeholder="Ваш логин телеграм" name="telegram" data-req="1">
                   </label>
                 </div>
                 <div class="tab-form__content">
-                  <label>Введите Ваш E-mail
-                    <input type="email" placeholder="Ваш E-mail" name="email" data-req="1">
+                  <label>Введите Ваш номер телефона
+                    <input type="tel" placeholder="Ваш номер телефона" name="phone" data-req="1">
                   </label>
                 </div>
                 <div class="tab-form__content">
-                  <label>Введите Ваш E-mail
-                    <input type="email" placeholder="Ваш E-mail" name="email" data-req="1">
+                  <label>Введите ссылку
+                    <input type="text" placeholder="Введите ссылку" name="links" data-req="1">
                   </label>
                 </div>
+                <input class="js-val-input" type="hidden" value="" name="formname">
               </div>
             </div>
             <button class="button button_lg send" type="submit"><span>Получить консультацию</span></button>
@@ -193,31 +194,31 @@
               <div class="paddings col-lg-6 col-md-6 col-sm-12 col-xs-12 col-xxs-12">
                 <div class="price-name">Landing Page</div>
                 <div class="price-text">Наше приоритетное направление работы. Разрабатываем продающие <br>сайты, которые работают даже тогда, когда Вы отдыхаете.</div>
-              </div><a class="price-box flex-vertical hover-plan hover-plan hover-plan_top col-lg-2 col-md-2 col-sm-4 col-xs-4 col-xxs-12" href="#"><span class="price-box__type">Minimal</span><span class="price-box__price"><strong>60 </strong>тыс. руб.</span><span class="price-box__link">Подробнее</span></a><a class="price-box flex-vertical hover-plan hover-plan hover-plan_bottom col-lg-2 col-md-2 col-sm-4 col-xs-4 col-xxs-12" href="#"><span class="price-box__type">Normal</span><span class="price-box__price"><strong>120 </strong>тыс. руб.</span><span class="price-box__link">Подробнее</span></a><a class="price-box flex-vertical hover-plan hover-plan hover-plan_right col-lg-2 col-md-2 col-sm-4 col-xs-4 col-xxs-12" href="#"><span class="price-box__type">Maximum</span><span class="price-box__price"><strong>200 </strong>тыс. руб.</span><span class="price-box__link">Подробнее</span></a>
+              </div><a class="price-box flex-vertical hover-plan hover-plan hover-plan_top fancybox col-lg-2 col-md-2 col-sm-4 col-xs-4 col-xxs-12" href="#price-1"><span class="price-box__type">Minimal</span><span class="price-box__price"><strong>60 </strong>тыс. руб.</span><span class="price-box__link">Подробнее</span></a><a class="price-box flex-vertical hover-plan hover-plan hover-plan_bottom fancybox col-lg-2 col-md-2 col-sm-4 col-xs-4 col-xxs-12" href="#price-2"><span class="price-box__type">Normal</span><span class="price-box__price"><strong>120 </strong>тыс. руб.</span><span class="price-box__link">Подробнее</span></a><a class="price-box flex-vertical hover-plan hover-plan hover-plan_right fancybox col-lg-2 col-md-2 col-sm-4 col-xs-4 col-xxs-12" href="#price-3"><span class="price-box__type">Maximum</span><span class="price-box__price"><strong>200 </strong>тыс. руб.</span><span class="price-box__link">Подробнее</span></a>
             </div>
             <div class="flex-line">
               <div class="paddings col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-12">
                 <div class="price-name">Корпоративные сайты</div>
                 <div class="price-text">Бизнес любого масштаба нуждается в качественной «упаковке». <br>Мы поможем представить Вашу компанию он-лайн на высоком уровне.</div>
-              </div><a class="price-box flex-vertical hover-plan hover-plan hover-plan_right col-lg-3 col-md-3 col-sm-4 col-xs-4 col-xxs-12" href="#"><span class="price-box__price"><strong>300 </strong>тыс. руб.</span></a>
+              </div><a class="price-box flex-vertical hover-plan hover-plan hover-plan_right fancybox js-val col-lg-3 col-md-3 col-sm-4 col-xs-4 col-xxs-12" href="#f" data-form="Корпоративные сайты"><span class="price-box__price"><strong>300 </strong>тыс. руб.</span></a>
             </div>
             <div class="flex-line">
               <div class="paddings col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-12">
                 <div class="price-name">Интернет-магазины</div>
                 <div class="price-text">Ежедневно, тысячи людей покупают различные товары в интернете, <br>а мы знаем как сделать этот процесс удобным и понятным для каждого.</div>
-              </div><a class="price-box flex-vertical hover-plan hover-plan hover-plan_right col-lg-3 col-md-3 col-sm-4 col-xs-4 col-xxs-12" href="#"><span class="price-box__price"><strong>500 </strong>тыс. руб.</span></a>
+              </div><a class="price-box flex-vertical hover-plan hover-plan hover-plan_right fancybox js-val col-lg-3 col-md-3 col-sm-4 col-xs-4 col-xxs-12" href="#f" data-form="Интернет-магазины"><span class="price-box__price"><strong>500 </strong>тыс. руб.</span></a>
             </div>
             <div class="flex-line">
               <div class="paddings col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-12">
                 <div class="price-name">Настройка и ведение рекламных кампаний</div>
                 <div class="price-text">Принцип работы такого типа рекламы основан на показе ваших <br>объявлений заинтересованной (целевой) аудитории в тот момент, <br>когда она ищет соответствующую информацию в поисковых системах.</div>
-              </div><a class="price-box flex-vertical hover-plan hover-plan hover-plan_right col-lg-3 col-md-3 col-sm-4 col-xs-4 col-xxs-12" href="#"><span class="price-box__price">Индивидуальный расчет</span></a>
+              </div><a class="price-box flex-vertical hover-plan hover-plan hover-plan_right fancybox js-val col-lg-3 col-md-3 col-sm-4 col-xs-4 col-xxs-12" href="#f" data-form="Настройка и ведение рекламных кампаний"><span class="price-box__price">Индивидуальный расчет</span></a>
             </div>
             <div class="flex-line">
               <div class="paddings col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-12">
                 <div class="price-name">Комплексные решения</div>
                 <div class="price-text">Все, что нужно для полноценного представления и продвижения <br>бизнеса в интернете: создание фирменного стиля, разработка сайта <br>и дополнительных продающих связок, настройка РК, SEO-продвижение.</div>
-              </div><a class="price-box flex-vertical hover-plan hover-plan hover-plan_right col-lg-3 col-md-3 col-sm-4 col-xs-4 col-xxs-12" href="#"><span class="price-box__price">от <strong>1</strong> млн. руб.</span></a>
+              </div><a class="price-box flex-vertical hover-plan hover-plan hover-plan_right fancybox js-val col-lg-3 col-md-3 col-sm-4 col-xs-4 col-xxs-12" href="#f" data-form="Индивидуальный расчет"><span class="price-box__price">от <strong>1</strong> млн. руб.</span></a>
             </div>
           </div>
         </div>
@@ -434,7 +435,7 @@
                     </div>
                   </div>
                   <div class="col-lg-7 col-md-7 col-sm-6 col-xs-6 col-xxs-12">
-                    <div class="btn-wrapp-footer"><a class="button" href="#"><span>Отправить заявку</span></a><a class="button button_trn" href="#"><span>Скачать презентацию</span></a></div>
+                    <div class="btn-wrapp-footer"><a class="button js-show-modal" href="#"><span>Отправить заявку</span></a><a class="button button_trn" href="#"><span>Скачать презентацию</span></a></div>
                   </div>
                 </div>
               </div>
@@ -449,10 +450,165 @@
         </div>
       </section>
       <!-- end section-footer-->
+      <div class="forms forms_1" id="price-1">
+        <div class="btn-close js-close-fancybox">Закрыть<i class="icon-close"></i></div>
+        <div class="forms__title">Тариф MINIMAL включает в себя:
+        </div>
+        <div class="wrapp">
+          <div class="l-side">
+            <ul class="price-content scrollbar-outer">
+              <li><span>01.</span> Экспресс-брифование клиента;</li>
+              <li><span>02.</span> Анализ ниши;</li>
+              <li><span>03.</span> Маркетинговый анализ 10 конкурентов;</li>
+              <li><span>04.</span> Составление краткого портрета ЦА, <br>выявление болей и потребностей;</li>
+              <li><span>05.</span> Разработка структуры Landing Page;	</li>
+              <li><span>06.</span> Разработка концептуального прототипа;</li>
+              <li><span>07.</span> Написание продающих текстов;</li>
+              <li><span>08.</span> Дизайн Landing Page;</li>
+              <li><span>09.</span> Адаптивная, кроссбраузерная верстка;</li>
+              <li><span>10.</span> Тестирование адаптивности, работы <br>форм, настройка анимации;</li>
+              <li><span>11.</span> Установка кодов Яндекс.Метрики <br>и/или Google Analytics.</li>
+              <li><span>12.</span> Экспресс-брифование клиента;</li>
+              <li><span>13.</span> Анализ ниши;</li>
+              <li><span>14.</span> Маркетинговый анализ 10 конкурентов;</li>
+              <li><span>15.</span> Составление краткого портрета ЦА, <br>выявление болей и потребностей;</li>
+            </ul>
+            <div class="getprice">
+              <div class="getprice__txt"><span>Срок разработки:</span> 15-20 дней
+              </div><a class="button button_lg fancybox js-val" data-form="MINIMAL" href="#f"><span>Получить предложение</span></a>
+            </div>
+          </div>
+          <div class="r-side"><img src="img/magazine.png" alt="" width="570" height="524"></div>
+        </div>
+      </div>
+      <div class="forms forms_1" id="price-2">
+        <div class="btn-close js-close-fancybox">Закрыть<i class="icon-close"></i></div>
+        <div class="forms__title">Тариф NORMAL включает в себя:
+        </div>
+        <div class="wrapp">
+          <div class="l-side">
+            <ul class="price-content scrollbar-outer">
+              <li><span>01.</span> Экспресс-брифование клиента;</li>
+              <li><span>02.</span> Анализ ниши;</li>
+              <li><span>03.</span> Маркетинговый анализ 10 конкурентов;</li>
+              <li><span>04.</span> Составление краткого портрета ЦА, <br>выявление болей и потребностей;</li>
+              <li><span>05.</span> Разработка структуры Landing Page;	</li>
+              <li><span>06.</span> Разработка концептуального прототипа;</li>
+              <li><span>07.</span> Написание продающих текстов;</li>
+              <li><span>08.</span> Дизайн Landing Page;</li>
+              <li><span>09.</span> Адаптивная, кроссбраузерная верстка;</li>
+              <li><span>10.</span> Тестирование адаптивности, работы <br>форм, настройка анимации;</li>
+              <li><span>11.</span> Установка кодов Яндекс.Метрики <br>и/или Google Analytics.</li>
+              <li><span>12.</span> Экспресс-брифование клиента;</li>
+              <li><span>13.</span> Анализ ниши;</li>
+              <li><span>14.</span> Маркетинговый анализ 10 конкурентов;</li>
+              <li><span>15.</span> Составление краткого портрета ЦА, <br>выявление болей и потребностей;</li>
+            </ul>
+            <div class="getprice">
+              <div class="getprice__txt"><span>Срок разработки:</span> 15-20 дней
+              </div><a class="button button_lg fancybox js-val" data-form="NORMAL" href="#f"><span>Получить предложение</span></a>
+            </div>
+          </div>
+          <div class="r-side"><img src="img/magazine.png" alt="" width="570" height="524"></div>
+        </div>
+      </div>
+      <div class="forms forms_1" id="price-3">
+        <div class="btn-close js-close-fancybox">Закрыть<i class="icon-close"></i></div>
+        <div class="forms__title">Тариф MAXIMUM включает в себя:
+        </div>
+        <div class="wrapp">
+          <div class="l-side">
+            <ul class="price-content scrollbar-outer">
+              <li><span>01.</span> Экспресс-брифование клиента;</li>
+              <li><span>02.</span> Анализ ниши;</li>
+              <li><span>03.</span> Маркетинговый анализ 10 конкурентов;</li>
+              <li><span>04.</span> Составление краткого портрета ЦА, <br>выявление болей и потребностей;</li>
+              <li><span>05.</span> Разработка структуры Landing Page;	</li>
+              <li><span>06.</span> Разработка концептуального прототипа;</li>
+              <li><span>07.</span> Написание продающих текстов;</li>
+              <li><span>08.</span> Дизайн Landing Page;</li>
+              <li><span>09.</span> Адаптивная, кроссбраузерная верстка;</li>
+              <li><span>10.</span> Тестирование адаптивности, работы <br>форм, настройка анимации;</li>
+              <li><span>11.</span> Установка кодов Яндекс.Метрики <br>и/или Google Analytics.</li>
+              <li><span>12.</span> Экспресс-брифование клиента;</li>
+              <li><span>13.</span> Анализ ниши;</li>
+              <li><span>14.</span> Маркетинговый анализ 10 конкурентов;</li>
+              <li><span>15.</span> Составление краткого портрета ЦА, <br>выявление болей и потребностей;</li>
+            </ul>
+            <div class="getprice">
+              <div class="getprice__txt"><span>Срок разработки:</span> 15-20 дней
+              </div><a class="button button_lg fancybox js-val" data-form="MAXIMUM" href="#f"><span>Получить предложение</span></a>
+            </div>
+          </div>
+          <div class="r-side"><img src="img/magazine.png" alt="" width="570" height="524"></div>
+        </div>
+      </div>
+      <div class="forms forms_2" id="f">
+        <div class="btn-close js-close-fancybox">Закрыть<i class="icon-close"></i></div>
+        <div class="forms__title">Получите коммерческое предложение
+        </div>
+        <div class="wrapp">
+          <div class="side"><img src="img/magazine2.png" alt="" width="470" height="494"></div>
+          <div class="side side_form">
+            <div class="form">
+              <div class="form__title-sm">Оставьте заявку
+              </div>
+              <div class="form__subtitle">Специалист компании UDiamond свяжется<br>с Вами в течение рабочего дня.
+              </div>
+              <form action="sendmail.php" method="post">
+                <label>Введите Ваше имя
+                  <input data-req="1" type="text" placeholder="Ваше имя" name="name">
+                </label>
+                <div class="tab-form">
+                  <div class="tab-form__head">Выберите удобный способ связи
+                  </div>
+                  <div class="tab-form__tabs-caption">
+                    <div class="tab-form__item tab-form__item_active">E-mail
+                    </div>
+                    <div class="tab-form__item">Telegram
+                    </div>
+                    <div class="tab-form__item">Viber
+                    </div>
+                    <div class="tab-form__item">VK
+                    </div>
+                  </div>
+                  <div class="tab-form__content-wrapp">
+                    <div class="tab-form__content tab-form__content_active">
+                      <label>Введите Ваш E-mail
+                        <input type="email" placeholder="Ваш E-mail" name="email" data-req="1">
+                      </label>
+                    </div>
+                    <div class="tab-form__content">
+                      <label>Введите Ваш логин телеграм
+                        <input type="text" placeholder="Ваш логин телеграм" name="telegram" data-req="1">
+                      </label>
+                    </div>
+                    <div class="tab-form__content">
+                      <label>Введите Ваш номер телефона
+                        <input type="tel" placeholder="Ваш номер телефона" name="phone" data-req="1">
+                      </label>
+                    </div>
+                    <div class="tab-form__content">
+                      <label>Введите ссылку
+                        <input type="text" placeholder="Введите ссылку" name="links" data-req="1">
+                      </label>
+                    </div>
+                    <input class="js-val-input" type="hidden" value="" name="formname">
+                  </div>
+                </div>
+                <button class="button button_lg send" type="submit"><span>Получить предложение</span></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="up-button"><i class="icon-arrow"></i></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/libs.min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/jQuery.scrollSpeed.js"></script>
+    <script src="js/css3-animate-it.js"></script>
+    <script src="js/jquery.scrollbar.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

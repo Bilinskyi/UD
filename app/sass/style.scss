@@ -6,6 +6,7 @@
 @import "_sprite.scss";
 
 @import "_animate.scss";
+@import "_scrollbar.scss";
 
 // @import "_play-button.scss";
 @import "_up-button.scss";
@@ -86,6 +87,7 @@ img {
 	transition: all .2s ease;
 	&_lg {
 		height: 76px;
+				border-radius: 38px;
 	}
 	&:hover {
 		background-color: #0355cf;

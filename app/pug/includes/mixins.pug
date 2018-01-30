@@ -52,3 +52,68 @@ mixin work(work_title, work_txt, work_svg)
 			+e.title !{work_title}
 			+e.txt  !{work_txt}
 
+
+
+
+
+
+
+mixin price(price_id, price_type, price_datainput)
+	+b.forms_1(id=price_id)
+		.btn-close.js-close-fancybox Закрыть
+			i.icon-close
+		+e.title Тариф !{price_type} включает в себя:
+		.wrapp
+			.l-side
+				ul.price-content.scrollbar-outer
+					li <span>01.</span> Экспресс-брифование клиента;
+					li <span>02.</span> Анализ ниши;
+					li <span>03.</span> Маркетинговый анализ 10 конкурентов;
+					li <span>04.</span> Составление краткого портрета ЦА, <br>выявление болей и потребностей;
+					li <span>05.</span> Разработка структуры Landing Page;	
+					li <span>06.</span> Разработка концептуального прототипа;
+					li <span>07.</span> Написание продающих текстов;
+					li <span>08.</span> Дизайн Landing Page;
+					li <span>09.</span> Адаптивная, кроссбраузерная верстка;
+					li <span>10.</span> Тестирование адаптивности, работы <br>форм, настройка анимации;
+					li <span>11.</span> Установка кодов Яндекс.Метрики <br>и/или Google Analytics.
+					li <span>12.</span> Экспресс-брифование клиента;
+					li <span>13.</span> Анализ ниши;
+					li <span>14.</span> Маркетинговый анализ 10 конкурентов;
+					li <span>15.</span> Составление краткого портрета ЦА, <br>выявление болей и потребностей;
+				+b.getprice
+					+e.txt <span>Срок разработки:</span> 15-20 дней
+					a.button.button_lg.fancybox.js-val(data-form=price_datainput href="#f")
+						span Получить предложение
+			.r-side
+				img(src="../img/magazine.png", alt="")
+
+
+
+mixin getProp(getProp_btn)
+	form(action="sendmail.php" method="post")
+		label Введите Ваше имя
+			input(data-req="1" type="text" placeholder="Ваше имя" name="name")
+		+b.tab-form
+			+e.head Выберите удобный способ связи
+			+e.tabs-caption
+				+e.item_active E-mail
+				+e.item Telegram
+				+e.item Viber
+				+e.item VK
+			+e.content-wrapp
+				+e.content_active
+					label Введите Ваш E-mail
+						input(type="email" placeholder="Ваш E-mail" name="email" data-req="1")
+				+e.content
+					label Введите Ваш логин телеграм
+						input(type="text" placeholder="Ваш логин телеграм" name="telegram" data-req="1")
+				+e.content
+					label Введите Ваш номер телефона
+						input(type="tel" placeholder="Ваш номер телефона" name="phone" data-req="1")
+				+e.content
+					label Введите ссылку
+						input(type="text" placeholder="Введите ссылку" name="links" data-req="1")
+				input(type="hidden" value="" name="formname" class="js-val-input")
+		button(type="submit" class="button button_lg send")
+			span=getProp_btn

@@ -17,7 +17,7 @@ $mail->CharSet = 'UTF-8';
     // $mail->Host = 'mail.ukraine.com.ua';  // Specify main and backup SMTP servers
     // $mail->SMTPAuth = true;                               // Enable SMTP authentication
     // $mail->Username = 'test@divclass.org';                 // SMTP username
-    // $mail->Password = 'qwerty1ff';                           // SMTP password
+    // $mail->Password = '';                           // SMTP password
     // $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
     // $mail->Port = 25;                                    // TCP port to connect to
 
@@ -30,41 +30,14 @@ $mail->isHTML(true);
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $email = $_POST['email'];
-$text = $_POST['text'];
+$telegram = $_POST['telegram'];
+$links = $_POST['links'];
+$formname = $_POST['formname'];
 
 $msg = '';
-if (array_key_exists('file', $_FILES)) {
-    // First handle the upload
-    // Don't trust provided filename - same goes for MIME types
-    // See http://php.net/manual/en/features.file-upload.php#114004 for more thorough upload validation
-    $uploadfile = tempnam(sys_get_temp_dir(), hash('sha256', $_FILES['file']['name']));
-    if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile)) {
-        // Upload handled successfully
-        // Now create a message
-
-
-        $mail->Subject = 'PHPMailer file sender';
-        $mail->Body = "Телефон {$_POST['phone']}";
-        // Attach the uploaded file
-        $mail->addAttachment($uploadfile, $_FILES['file']['name']);
-        if (!$mail->send()) {
-            $msg .= "Mailer Error: " . $mail->ErrorInfo;
-        } else {
-            $msg .= "Message sent!";
-        }
-    } else {
-        $msg .= 'Failed to move file to ' . $uploadfile;
-        $mail->Subject = 'Just Phone';
-        $mail->Body = "Телефон {$_POST['phone']}";
-        if (!$mail->send()) {
-            $msg .= "Mailer Error: " . $mail->ErrorInfo;
-        } else {
-            $msg .= "Message sent!";
-        }
-    }
-} elseif (array_key_exists('phone', $_POST)) {
-    $mail->Subject = 'Заявка';
-    $mail->Body = "$name<br>$phone";
+    if (array_key_exists('name', $_POST)) {
+    $mail->Subject = 'Заявка UD';
+    $mail->Body = "$name<br>$phone<br>$email<br>$telegram<br>$links<br>$formname";
     if (!$mail->send()) {
         $msg .= "Mailer Error: " . $mail->ErrorInfo;
     } else {

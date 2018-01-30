@@ -38,31 +38,52 @@ button:disabled {
 
 
 .form-fixed {
-	padding-left: 85px;
-	padding-right: 85px;
-	padding-top: 155px;
+	padding: 0px 85px;
 	transform: translate(100%, 0%);
 	z-index: 100;
 	position: fixed;
 	right: 0;
 	top: 0;
 	height: 100%;
-	min-height: 100%;
 	overflow-y: auto;
 
 	width: 530px;
 	background-image: linear-gradient(to bottom, #141721 0%, #292f3f 100%);
 	transition: transform .25s ease;
+
+	.form {
+		position: relative;
+		top: 50%;
+		transform: translate(0, -50%);
+		padding: 20px 0;
+	}
+
+	&_scroll {
+		.form {
+			position: static;
+			top: 0%;
+			transform: translate(0, 0);
+		}
+	}
+	
 	&_show {
-				transform: translate(0, 0);
+		transform: translate(0, 0);
 	}
 	button {
 		margin-top: 20px;
-		border-radius: 38px;
 	}
 }
 .form {
+	button {
+		margin-top: 20px;
+	}
 
+	&__title-sm {
+		color: #ffffff;
+		font-family: $font1;
+		font-size: 23px;
+		font-weight: 500;
+	}
 	&__title {
 		color: #ffffff;
 		font-family: $font1;
@@ -181,7 +202,7 @@ button:disabled {
 	border-color: red !important;
 }
 
-.js-close {
+.btn-close {
 	height: 16px;
 	color: #ffffff;
 	font-family: $font1;
@@ -195,6 +216,7 @@ button:disabled {
 	position: absolute;
 	top: 25px;
 	right: 30px;
+	z-index: 101;
 	i {
 		position: absolute;
 		top: 50%;
@@ -203,5 +225,102 @@ button:disabled {
 	}
 	i:before {
 		font-size: 14px;
+	}
+}
+
+
+
+
+
+
+
+
+.forms {
+	width: 970px;
+	background-image: linear-gradient(to bottom, #141721 0%, #292f3f 100%);
+	display: none;
+	padding-top: 45px;
+	&_1 {
+		padding-bottom: 20px;
+		padding-left: 50px;
+		padding-right: 0;
+	}
+	&_2 {
+		padding-bottom: 30px;
+		padding-left: 0;
+		padding-right: 0;
+		.form__subtitle {
+			margin-top: 5px;
+			margin-bottom: 20px;
+		}
+	}
+	&__title {
+		color: #ffffff;
+		text-align: center;
+		font-family: $font1;
+		font-size: 32px;
+		font-weight: 500;
+		letter-spacing: 0.64px;
+	}
+}
+.wrapp {
+	display: flex;
+	align-items: stretch;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-top: 27px;
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+.side {
+	width: 50%;
+	&_form {
+		padding: 0 110px 0 15px;
+	}
+}
+.l-side {
+	max-width: 40%;
+}
+.r-side {
+	max-width: 60%;
+}
+.price-content {
+	counter-reset: heading;
+	height: 365px;
+	li {
+		color: #ffffff;
+		font-family: $font1;
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 19px;
+		position: relative;
+		padding-left: 34px;
+		margin-bottom: 10px;
+		span {
+			font-weight: 500;
+			position: absolute;
+			line-height: 19px;
+			left: 0;
+			top: -1px;
+		}
+	}
+}
+
+.getprice {
+	display: inline-block;
+	text-align: center;
+	padding-top: 22px;
+	&__txt {
+		padding-bottom: 10px;
+		color: #ffffff;
+		font-family: $font1;
+		font-size: 15px;
+		line-height: 19px;
+		font-weight: 400;
+		span {
+			font-weight: 500;
+		}
 	}
 }
