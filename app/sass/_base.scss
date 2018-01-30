@@ -1,22 +1,11 @@
 /* _____ Basic elements _____ */
 
-::-webkit-input-placeholder {color: rgba(#1a1a1a, .5);font-size: 18px;}
-::-moz-placeholder {color: rgba(#1a1a1a, .5);font-size: 18px;}
-:-moz-placeholder {color: rgba(#1a1a1a, .5);font-size: 18px;}
-:-ms-input-placeholder {color: rgba(#1a1a1a, .5);font-size: 18px;}
+::-webkit-input-placeholder {color: #515567;font-family: $font1;font-size: 13px;font-weight: 400;}
+::-moz-placeholder {color: #515567;font-family: $font1;font-size: 13px;font-weight: 400;}
+:-moz-placeholder {color: #515567;font-family: $font1;font-size: 13px;font-weight: 400;}
+:-ms-input-placeholder {color: #515567;font-family: $font1;font-size: 13px;font-weight: 400;}
 
-@include breakpoint("phablet") {
-	::-webkit-input-placeholder {font-size: 20px;}
-	::-moz-placeholder {font-size: 20px;}
-	:-moz-placeholder {font-size: 20px;}
-	:-ms-input-placeholder {font-size: 20px;}
-}
-@include breakpoint("small") {
-	::-webkit-input-placeholder {font-size: 20px;}
-	::-moz-placeholder {font-size: 20px;}
-	:-moz-placeholder {font-size: 20px;}
-	:-ms-input-placeholder {font-size: 20px;}
-}
+
 
 
 

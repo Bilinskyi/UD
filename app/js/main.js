@@ -84,8 +84,10 @@
     function check1() {
       wH = $(window).innerHeight();
       // pt1 = parseInt( $('.header-inside').css('paddingTop') ) + parseInt( $('.header-inside').css('paddingBottom') ) + parseInt( $('.header').css('paddingTop')  ) + parseInt( $('.header').css('paddingTop')  ) ;
+      pt1 = parseInt( $('.header').css('paddingTop')  ) + parseInt( $('.header').css('paddingBottom')  ) ;
+      console.log(pt1);
       // paddingsTop = pt1;
-      contentHeight = $('.header-inside .container').outerHeight() + 120;
+      contentHeight = pt1 + $('.header-inside .container').outerHeight();
       // console.log(contentHeight);
       // contentAllHeight = paddingsTop + contentHeight;
       // contentAllHeight = contentHeight;
@@ -122,7 +124,7 @@
 
 
    var checkF = headerScreen();
-   checkF();
+   // checkF();
    $(window).on('load resize', function() {
 
     checkF();
@@ -152,8 +154,29 @@
 
 
 
+   $('.tab-form').on('click', '.tab-form__item:not(.tab-form__item_active)', function() {
+    $(this)
+    .addClass('tab-form__item_active').siblings().removeClass('tab-form__item_active')
+    .closest('.tab-form').find('.tab-form__content').removeClass('tab-form__content_active').css({opacity: '0',display: 'none'}).eq($(this).index()).addClass('tab-form__content_active').css('display', 'block').animate({opacity: '1'}, 300);
+    $(this).closest('.tab-form').find('.tab-form__content').find('input').removeClass('error').removeAttr('data-req');
+    $(this).closest('.tab-form').find('.tab-form__content').eq($(this).index()).find('input').attr('data-req', '1');
+
+  })
 
 
+   $('.js-show-modal').on('click', function(e) {
+     e.preventDefault(); 
+     $('body').css({
+      overflow: 'hidden'
+    })
+     $('.form-fixed').addClass('form-fixed_show');
+   });
+
+   $('.js-close').on('click', function(e) {
+     e.preventDefault(); 
+     $('body').removeAttr('style');
+     $('.form-fixed').removeClass('form-fixed_show');
+   });
 
 
 
@@ -194,47 +217,57 @@
     // });
 
 
-    // $(".send").on('click', function (e) {
-    //  e.preventDefault();
+    $(".send").on('click', function (e) {
+     e.preventDefault();
+     var form = $(this).parents("form");
+     form.find("input").each(function () {
 
-    //  var form = $(this).parents("form");
-    //  form.find("input").each(function () {
+       var inp = $(this);
+       var req = $(this).data("req");
 
-    //    var inp = $(this);
-    //    var req = $(this).data("req");
+       if ( inp.hasClass('js-email') ) {
+        var em = $(this).val();
+        if ( !validateEmail(em) ) {
+          inp.addClass("error");
+        } else {
+          inp.removeClass("error");
+        }
+      } else if (req === 1 && !inp.val().length ) {
+        inp.addClass("error");
+      } else {
+        inp.removeClass("error");
+      }
 
-    //    if (req === 1 && !inp.val().length ) {
-    //      inp.addClass("error");
-    //    } else {
-    //      inp.removeClass("error");
-    //    }
+    });
 
-    //  });
+     if (form.find(".error").length) {
+       return false;
+     } else {
+       $.ajax({
+         type: "POST",
+         url: form.attr('action'),
+         data: form.serialize(),
+         success: function (response) {
 
-    //  if (form.find(".error").length) {
-    //    return false;
-    //  } else {
-    //    $.ajax({
-    //      type: "POST",
-    //      url: form.attr('action'),
-    //      data: form.serialize(),
-    //      success: function (response) {
+           $(':input')
+           .not(':button, :submit, :reset, :hidden')
+           .val('')
+           .removeAttr('checked')
+           .removeAttr('selected');
 
-    //        $(':input')
-    //        .not(':button, :submit, :reset, :hidden')
-    //        .val('')
-    //        .removeAttr('checked')
-    //        .removeAttr('selected');
+           $.fancybox.close();
+           var message = $('.modal');
+           $.fancybox(message);
 
-    //        $.fancybox.close();
-    //        var message = $('.modal');
-    //        $.fancybox(message);
+         }
+       });
+     }
 
-    //      }
-    //    });
-    //  }
-
-    // });
+   });
+    function validateEmail(email) {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    }
 
 
 

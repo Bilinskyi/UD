@@ -84,6 +84,9 @@ img {
 	letter-spacing: 0.52px;
 	white-space: nowrap;
 	transition: all .2s ease;
+	&_lg {
+		height: 76px;
+	}
 	&:hover {
 		background-color: #0355cf;
 		border-color: #0355cf;

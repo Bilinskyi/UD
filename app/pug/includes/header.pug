@@ -11,7 +11,7 @@ header.header
 					.main-title <strong class="glitch glitch_2" data-txt="development">development</strong> <small>creative agency</small>
 					.main-subtitle Помогаем опередить Ваших конкурентов <span>on-line</span>
 					.btn-wrapp
-						a.button(href="#")
+						a.button.js-show-modal(href="#")
 							span Обсудить проект
 						a.button.button_trn.scr(href="#section-2")
 							span Смотреть портфолио
@@ -39,3 +39,36 @@ header.header
 					i.icon-dribbble
 
 // end header
+
+
+.form-fixed
+	.js-close Закрыть
+		i.icon-close
+	+b.form
+		+e.title Получите<br>бесплатную<br>консультацию
+		+e.subtitle Заполните заявку. Специалист компании<br>свяжется с Вами в течение рабочего дня.
+		form(action="sendmail.php" method="post")
+			label Введите Ваше имя
+				input(data-req="1" type="text" placeholder="Ваше имя" name="name")
+			+b.tab-form
+				+e.head Выберите удобный способ связи
+				+e.tabs-caption
+					+e.item_active E-mail
+					+e.item Telegram
+					+e.item Viber
+					+e.item VK
+				+e.content-wrapp
+					+e.content_active
+						label Введите Ваш E-mail
+							input(type="email" placeholder="Ваш E-mail" name="email" data-req="1")
+					+e.content
+						label Введите Ваш E-mail
+							input(type="email" placeholder="Ваш E-mail" name="email" data-req="1")
+					+e.content
+						label Введите Ваш E-mail
+							input(type="email" placeholder="Ваш E-mail" name="email" data-req="1")
+					+e.content
+						label Введите Ваш E-mail
+							input(type="email" placeholder="Ваш E-mail" name="email" data-req="1")
+			button(type="submit" class="button button_lg send")
+				span Получить консультацию
