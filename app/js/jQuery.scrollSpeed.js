@@ -5,7 +5,6 @@
 
 (function($) {
 
-    var scrollTopNew;
 
     jQuery.scrollSpeed = function(step, speed, easing) {
 
@@ -40,9 +39,7 @@
 
                     root = (root + view) >= $document.height() ? root : root += step;
                     if ( root < hh ) {
-                        console.log('ddd');
                         root = hh;
-                        console.log(root);
                         
                     } 
                     else {

@@ -96,6 +96,7 @@
 
 .fancybox-close {
 	position: absolute;
+	display: none !important;
 	top: 0;
 	left: 100%;
 	margin-left: 10px;
@@ -122,6 +123,7 @@
 	cursor: pointer;
 	text-decoration: none;
 	background: transparent url('../img/fancybox/blank.gif'); /* helps IE */
+	display: none !important;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	z-index: 8040;
 }

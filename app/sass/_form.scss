@@ -266,7 +266,7 @@ button:disabled {
 .wrapp {
 	display: flex;
 	align-items: stretch;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	justify-content: space-between;
 	padding-top: 27px;
 	img {
@@ -286,11 +286,12 @@ button:disabled {
 .r-side {
 	max-width: 60%;
 }
+
 .price-content {
-	counter-reset: heading;
-	height: 365px;
+	max-height: 365px;
+	// overflow: auto;
 	li {
-		color: #ffffff;
+		color: #fff;
 		font-family: $font1;
 		font-size: 15px;
 		font-weight: 400;

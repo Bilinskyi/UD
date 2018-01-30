@@ -13,11 +13,15 @@ block content
 	include includes/section-6
 	
 	include includes/footer.pug
+	include includes/modals.pug
+
+
+
 
 	
-	+price('price-1', 'MINIMAL', 'MINIMAL')
-	+price('price-2', 'NORMAL', 'NORMAL')
-	+price('price-3', 'MAXIMUM', 'MAXIMUM')
+	+price('price-1', 'MINIMAL', 'MINIMAL', 'scroll1')
+	+price('price-2', 'NORMAL', 'NORMAL', 'scroll2')
+	+price('price-3', 'MAXIMUM', 'MAXIMUM', 'scroll3')
 
 
 
@@ -41,7 +45,6 @@ block content
 
 	
 	//- include includes/form.pug
-	//- include includes/modals.pug
 	//- include includes/button-menu.pug
 
 	

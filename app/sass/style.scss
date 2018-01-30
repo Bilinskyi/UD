@@ -982,6 +982,7 @@ img {
 	}
 
 	&__price {
+		white-space: nowrap;
 		display: block;
 		color: #ffffff;
 		font-family: $font1;

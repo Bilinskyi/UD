@@ -58,14 +58,14 @@ mixin work(work_title, work_txt, work_svg)
 
 
 
-mixin price(price_id, price_type, price_datainput)
+mixin price(price_id, price_type, price_datainput, price_scroll)
 	+b.forms_1(id=price_id)
 		.btn-close.js-close-fancybox Закрыть
 			i.icon-close
 		+e.title Тариф !{price_type} включает в себя:
 		.wrapp
 			.l-side
-				ul.price-content.scrollbar-outer
+				ul.price-content(id=price_scroll)
 					li <span>01.</span> Экспресс-брифование клиента;
 					li <span>02.</span> Анализ ниши;
 					li <span>03.</span> Маркетинговый анализ 10 конкурентов;
@@ -107,13 +107,13 @@ mixin getProp(getProp_btn)
 						input(type="email" placeholder="Ваш E-mail" name="email" data-req="1")
 				+e.content
 					label Введите Ваш логин телеграм
-						input(type="text" placeholder="Ваш логин телеграм" name="telegram" data-req="1")
+						input(type="text" placeholder="Ваш логин телеграм" name="telegram")
 				+e.content
 					label Введите Ваш номер телефона
-						input(type="tel" placeholder="Ваш номер телефона" name="phone" data-req="1")
+						input(type="tel" placeholder="Ваш номер телефона" name="phone")
 				+e.content
 					label Введите ссылку
-						input(type="text" placeholder="Введите ссылку" name="links" data-req="1")
+						input(type="text" placeholder="Введите ссылку" name="links")
 				input(type="hidden" value="" name="formname" class="js-val-input")
 		button(type="submit" class="button button_lg send")
 			span=getProp_btn

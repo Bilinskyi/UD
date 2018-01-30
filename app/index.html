@@ -79,17 +79,17 @@
                 </div>
                 <div class="tab-form__content">
                   <label>Введите Ваш логин телеграм
-                    <input type="text" placeholder="Ваш логин телеграм" name="telegram" data-req="1">
+                    <input type="text" placeholder="Ваш логин телеграм" name="telegram">
                   </label>
                 </div>
                 <div class="tab-form__content">
                   <label>Введите Ваш номер телефона
-                    <input type="tel" placeholder="Ваш номер телефона" name="phone" data-req="1">
+                    <input type="tel" placeholder="Ваш номер телефона" name="phone">
                   </label>
                 </div>
                 <div class="tab-form__content">
                   <label>Введите ссылку
-                    <input type="text" placeholder="Введите ссылку" name="links" data-req="1">
+                    <input type="text" placeholder="Введите ссылку" name="links">
                   </label>
                 </div>
                 <input class="js-val-input" type="hidden" value="" name="formname">
@@ -450,13 +450,20 @@
         </div>
       </section>
       <!-- end section-footer-->
+      <div class="modal" id="thx">
+        <h2>Спасибо за заявку</h2>
+      </div>
+      <div class="modal" id="privacy">
+        <h2>Политика конфиденциальности</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et quod, aut eligendi consequatur iste, eveniet dolorem aperiam cupiditate ad optio fuga neque omnis hic totamvoluptatem repellat deleniti, voluptas dignissimos.</p>
+      </div>
       <div class="forms forms_1" id="price-1">
         <div class="btn-close js-close-fancybox">Закрыть<i class="icon-close"></i></div>
         <div class="forms__title">Тариф MINIMAL включает в себя:
         </div>
         <div class="wrapp">
           <div class="l-side">
-            <ul class="price-content scrollbar-outer">
+            <ul class="price-content" id="scroll1">
               <li><span>01.</span> Экспресс-брифование клиента;</li>
               <li><span>02.</span> Анализ ниши;</li>
               <li><span>03.</span> Маркетинговый анализ 10 конкурентов;</li>
@@ -487,7 +494,7 @@
         </div>
         <div class="wrapp">
           <div class="l-side">
-            <ul class="price-content scrollbar-outer">
+            <ul class="price-content" id="scroll2">
               <li><span>01.</span> Экспресс-брифование клиента;</li>
               <li><span>02.</span> Анализ ниши;</li>
               <li><span>03.</span> Маркетинговый анализ 10 конкурентов;</li>
@@ -518,7 +525,7 @@
         </div>
         <div class="wrapp">
           <div class="l-side">
-            <ul class="price-content scrollbar-outer">
+            <ul class="price-content" id="scroll3">
               <li><span>01.</span> Экспресс-брифование клиента;</li>
               <li><span>02.</span> Анализ ниши;</li>
               <li><span>03.</span> Маркетинговый анализ 10 конкурентов;</li>
@@ -580,17 +587,17 @@
                     </div>
                     <div class="tab-form__content">
                       <label>Введите Ваш логин телеграм
-                        <input type="text" placeholder="Ваш логин телеграм" name="telegram" data-req="1">
+                        <input type="text" placeholder="Ваш логин телеграм" name="telegram">
                       </label>
                     </div>
                     <div class="tab-form__content">
                       <label>Введите Ваш номер телефона
-                        <input type="tel" placeholder="Ваш номер телефона" name="phone" data-req="1">
+                        <input type="tel" placeholder="Ваш номер телефона" name="phone">
                       </label>
                     </div>
                     <div class="tab-form__content">
                       <label>Введите ссылку
-                        <input type="text" placeholder="Введите ссылку" name="links" data-req="1">
+                        <input type="text" placeholder="Введите ссылку" name="links">
                       </label>
                     </div>
                     <input class="js-val-input" type="hidden" value="" name="formname">
@@ -605,10 +612,7 @@
     </div>
     <div class="up-button"><i class="icon-arrow"></i></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/jquery.fancybox.pack.js"></script>
-    <script src="js/jQuery.scrollSpeed.js"></script>
-    <script src="js/css3-animate-it.js"></script>
-    <script src="js/jquery.scrollbar.min.js"></script>
+    <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

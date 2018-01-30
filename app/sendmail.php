@@ -24,6 +24,7 @@ $mail->CharSet = 'UTF-8';
 
 $mail->setFrom('test@divclass.org', 'First Last');
 $mail->addAddress('1unitedcrew@gmail.com', 'Bilinskyi');
+$mail->addAddress('sales@lpdiamond.com', 'Bilinskyi');
 
 $mail->isHTML(true); 
 

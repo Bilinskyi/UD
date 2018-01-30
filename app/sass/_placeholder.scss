@@ -130,6 +130,9 @@
 	@else if $point == bp1 {
 		@media (max-width: 1599px) { @content ; }
 	}
+	@else if $point == bp2 {
+		@media (max-width: 1440px) { @content ; }
+	}
 
 	@else if $point == maxlarge {
 		@media (max-width: $lg-bp - 1) { @content ; }

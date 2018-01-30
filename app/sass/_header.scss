@@ -155,6 +155,10 @@ $steps: 30;
 	font-weight: 700;
 	line-height: 90px;
 	text-transform: uppercase;
+	@include breakpoint("bp2") {
+		font-size: 90px;
+		line-height: 70px;
+	}
 	// @include breakpoint("maxlarge") {
 	// 	font-size: 80px;
 	// }
@@ -348,6 +352,7 @@ $steps: 30;
 }
 
 .trn-text {
+	white-space: nowrap;
 	color: #b1b7cf;
 	font-family: $font1;
 	font-size: 13px;
